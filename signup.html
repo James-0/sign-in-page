@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Signup Page</title>
+    <style>
+        .col {
+            min-height: 100vh;
+        }
+    </style>
+    <script src="https://use.fontawesome.com/9cfb884a95.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            if (document.getElementById('buyer').checked) {
+                hide();
+            } else {
+                show();
+            }
+
+        });
+
+        function hide() {
+            var hide = document.getElementsByClassName("sell");
+            for (var i = 0; i < hide.length; i++) {
+                hide[i].style.display = "none";
+            }
+        }
+        function show() {
+            var show = document.getElementsByClassName("sell");
+            for (var i = 0; i < show.length; i++) {
+                if (show[i].style.display === "none") {
+                    show[i].style.display = "block";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row d-flex">
+            <div class="col-sm-4 col-md-4 col-lg-4 " style="background-image: url('image/Desktop - 5.png'); background-position:center; background-repeat: no-repeat; background-size: cover">
+                
+            </div>
+            <div class="col col-sm-8 col-md-8 col-lg-8" style="background-color:aliceblue">
+                <div class="container h-100">
+                    <div class="h-100 row justify-content-center">
+                        <div class="col-10 align-self-center">
+                            <h2 class="col-12">Welcome To Fashion Square</h2>
+                            <p class="col-12">Fashion Square is your one-stop shop for all your <br />clothing needs</p>
+                            <form class="">
+                                <div class="col-sm-12 col-lg-8 col-md-8 btn-group btn-group-toggle mt-3" data-toggle="buttons">
+                                    <label class="btn btn-secondary active" onclick="hide()">
+                                        <input type="radio" id="buyer" name="radio" autocomplete="off" checked/>Buyer
+                                    </label>
+                                    <label class="btn btn-secondary" onclick="show()">
+                                        <input type="radio" id="seller" name="radio" autocomplete="off" />Seller
+                                    </label>
+                                </div>
+                                <div class="row form-group mt-3 px-3">
+                                    <div class="col-lg-6 col-md-12 mt-3">
+                                        <input type="text" class="form-control form-control-lg" id="fname" placeholder="Firstname" />
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 mt-3">
+                                        <input type="text" class="form-control form-control-lg" id="lname" placeholder="Lastname" />
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 form-group mt-3 has-error">
+                                    <input type="email" class="form-control form-control-lg" id="email" placeholder="E-mail" />
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                                <div class="col-12 form-group mt-3">
+                                    <input type="text" class="form-control form-control-lg" id="phone" placeholder="Phone" />
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                                <div class="col-12 form-group mt-3">
+                                    <input type="password" class="form-control form-control-lg" id="password" placeholder="Password" />
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                                <div class="col-12 form-group mt-3">
+                                    <input type="password" class="form-control form-control-lg" id="password2" placeholder="Re-Enter Password" />
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                                <div class="col-12 form-group mt-3">
+                                    <textarea class="form-control form-control-lg" placeholder="Address" id="address"></textarea>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                                <div class="col-12 form-group mt-3">
+                                    <input type="text" class="form-control form-control-lg sell" id="b_name" placeholder="Business Name" />
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                                <div class="col-12 form-group mt-3">
+                                    <textarea class="form-control form-control-lg sell" placeholder="Business Description" id="b_desc"></textarea>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                                <div class="col-12 form-group mt-3">
+                                    <input type="text" class="form-control form-control-lg sell" id="b_contact" placeholder="Business Contact" />
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+
+                                <div class="row form-group mt-3 ml-3">
+                                    <button type="submit" class="btn-primary btn col-lg-4 col-md-11 mt-3 mr-3 font-weight-bold">Continue</button>
+                                    <button type="button" class="fa btn-primary btn col-md-11 col-lg-4 mt-3 font-weight-bold">
+                                        <span class="fa-stack fa-lg" style="font-size:small;">
+                                            <i class="fa fa-circle fa-stack-2x" ></i>
+                                            <i class="fa fa-google fa-stack-1x fa-inverse" aria-hidden="true" style="color: red;"></i>
+                                        </span>
+                                        Sign In With Google</button>
+                                </div>
+                            </form>
+                            <p class="mt-4 col-12">Already have an acccount? <a href="#" class="text-primary">Click here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Javascript and jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+</body>
+</html>
